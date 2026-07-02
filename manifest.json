@@ -1,0 +1,28 @@
+{
+    "manifest_version": 3,
+    "name": "Khan Academy Transcript Exporter",
+    "version": "1.0",
+    "description": "One-click copy for clean Khan Academy transcripts.",
+    "permissions": [
+        "activeTab",
+        "scripting"
+    ],
+    "background": {
+        "scripts": [
+            "background.js"
+        ]
+    },
+    "action": {
+        "default_title": "Copy Clean Transcript"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*.khanacademy.org/*"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ]
+}
